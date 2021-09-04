@@ -15,5 +15,19 @@
       "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps atau @Kenkanrobot",
       "required": true
     }
-  }
+  },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
 }
