@@ -36,8 +36,10 @@ async def stream(client, m: Message):
             print()
         except Exception as e:
             await msg.edit(f"**Error** -- `{e}`")
+            return os.system("rm -rf downloads")
     else:
         await m.reply("❌ **Mohon Balas Ke Video**")
+        return os.system("rm -rf downloads")
 
 @app.on_message(filters.outgoing & filters.command('mati'))
 async def stopvideo(client, m: Message):
