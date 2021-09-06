@@ -41,6 +41,11 @@ async def stream(client, m: Message):
         await m.reply("❌ **Mohon Balas Ke Video**")
         return os.system("rm -rf downloads")
 
+@app.on_message(filters.outgoing & filters.command("repo"))
+async def repo(client, m: Message):
+    await m.reply_text("**Nih kak reponya kalau mau deploy**\n[REPO](https://github.com/kenkansaja/Video-Userbot)", disable_web_page_preview=True)
+
+
 @app.on_message(filters.outgoing & filters.command('mati'))
 async def stopvideo(client, m: Message):
     chat_id = m.chat.id
