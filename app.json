@@ -1,7 +1,6 @@
 {
   "name": "Video-Userbot",
   "repository": "https://github.com/kenkansaja/Video-Userbot",
-  "stack": "container",
   "env": {
     "SESSION_NAME": {
       "description": "Masukan String Session Pyrogram (P) untuk assistant yang naik ke VCG",
@@ -16,18 +15,4 @@
       "required": true
     }
   },
-    "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    },
-    "stack": "heroku-20"
-}
-}
+    
